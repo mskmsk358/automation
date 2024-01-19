@@ -1,0 +1,31 @@
+{
+    "root": true,
+    "env": {
+        "node": true,
+        "browser": true,
+        "es6": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 2022
+    },
+    "extends": [
+        "plugin:import/recommended",
+        "plugin:playwright/recommended",
+        "eslint:recommended"
+    ],
+    "rules": {
+        "no-undef": "error",
+        "require-await": "error",
+        "no-return-await": "error",
+        "import/named": "off",
+        "playwright/no-wait-for-timeout": "off",
+        "playwright/expect-expect": "off",
+        "playwright/no-conditional-in-test": "off",
+        "playwright/no-nested-step": "off",
+        "playwright/no-eval": "off",
+        "playwright/no-useless-await": "error",
+        "playwright/no-force-option": "off",
+        "playwright/no-skipped-test": "off",
+        "no-unused-vars": "error"
+    }
+}

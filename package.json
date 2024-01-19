@@ -4,15 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-   
+    "lint": "eslint tests **/*.js",
+    "format": "prettier --write tests **/*.js",
+    "lint:fix": "eslint --fix --ext .js tests",
+    "prepare": "husky install .husky",
+    "report": "npx allure generate --clean && npx allure open",
+    "test": "npx playwright test"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
- "@playwright/test": "^1.29.2",
- "playwright": "^1.29.2",
- "allure-playwright": "^2.0.0-beta.20"
- 
+    "@playwright/test": "^1.41.0",
+    "allure-commandline": "^2.26.0",
+    "allure-playwright": "^2.10.0",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-playwright": "^0.21.0",
+    "husky": "^8.0.3",
+    "playwright": "^1.41.0",
+    "prettier": "^3.2.2"
   }
 }
